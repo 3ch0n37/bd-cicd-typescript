@@ -1,5 +1,7 @@
 # learn-cicd-typescript-starter (Notely)
 
+![GitHub CI tests](https://github.com/3ch0n37/bd-cicd-typescript/actions/workflows/ci.yml/badge.svg)
+
 This repo contains the typescript starter code for the "Notely" application for the "Learn CICD" course on [Boot.dev](https://boot.dev).
 
 ## Local Development
