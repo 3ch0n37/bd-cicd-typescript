@@ -32,4 +32,4 @@ jobs:
         uses: google-github-actions/setup-gcloud@v3
 
       - name: Submit a build to Cloud Build
-        run: gcloud builds submit --tag ${{ env.GCP_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REPOSITORY }}/notely:latest .
+        run: gcloud builds submit --tag ${{ vars.GCP_REGION }}/${{ vars.GCP_PROJECT }}/${{ vars.GCP_REPOSITORY }}/notely:latest .
