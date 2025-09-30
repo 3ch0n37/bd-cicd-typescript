@@ -22,3 +22,14 @@ jobs:
 
       - name: Build the application
         run: npm run build
+
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v3
+
+      - name: Submit a build to Cloud Build
+        run: gcloud builds submit --tag ${{ env.GCP_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REPOSITORY }}/notely:latest .
